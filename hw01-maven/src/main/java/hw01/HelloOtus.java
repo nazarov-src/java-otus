@@ -1,3 +1,5 @@
+package hw01;
+
 import com.google.common.collect.ImmutableList;
 
 public class HelloOtus {
