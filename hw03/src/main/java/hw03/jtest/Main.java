@@ -1,7 +1,5 @@
 package hw03.jtest;
 
-import com.sun.jdi.InvocationException;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.LinkedList;
@@ -61,8 +59,7 @@ public class Main {
                 if (after != null)
                     after.invoke(instance);
             }
-
-        } catch (InvocationException e) {
+        } catch (InvocationTargetException e) {
             // got here from before or after methods
             System.out.println("Error from tested object: " + e.getCause().getMessage());
 
