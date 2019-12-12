@@ -184,7 +184,12 @@ public class DIYarrayList<E> implements List<E> {
     }
 
     private Object[] grow (int newSize) {
-        return Arrays.copyOf(storage, newSize);
+
+        Object[] newStorage = new Object[newSize];
+        for (int i = 0; i < size; i++) {
+            newStorage[i]  = storage[i];
+        }
+        return newStorage;
     }
 
     private void checkIndex(int index) {
