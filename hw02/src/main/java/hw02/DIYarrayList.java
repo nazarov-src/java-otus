@@ -140,7 +140,8 @@ public class DIYarrayList<E> implements List<E> {
                     storage, index,
                     numMoved);
 
-        storage[--size] = null;
+        storage[size - 1] = null;
+        size--;
         return oldValue;
     }
 
